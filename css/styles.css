@@ -26,7 +26,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 40px;
+  font-size: 2.5vw;
   text-align: center;
 }
 
@@ -160,6 +160,9 @@ main aside #aside2 {
   body {
     width: 90%;
     margin: auto;
+  }
+  .centercontent, header #logo, header nav ul li {
+    font-size: 4vw;
   }
   header {
     height: 100%;

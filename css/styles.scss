@@ -49,7 +49,7 @@ body {
     align-items    : center;
     justify-content: center;
 
-    font-size : 40px;
+    font-size : 2.5vw;
     text-align: center;
 }
 
@@ -185,6 +185,10 @@ main {
         width : 90%;
         margin: auto;
 
+    }
+
+    .centercontent {
+        font-size: 4vw;
     }
 
     header {
