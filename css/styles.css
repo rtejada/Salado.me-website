@@ -208,9 +208,14 @@ footer {
     height: 100%;
     background-color: #154CB7;
     margin-top: 16px;
+    width: 90%;
   }
   footer ul {
+    width: 100%;
     background-color: yellow;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   footer ul li {
     -webkit-box-align: center;
