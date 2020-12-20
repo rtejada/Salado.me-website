@@ -28,8 +28,10 @@ map-get($colors, green);
 
 $margins: (spacing-between-items: 24px, );
 
+
 * {
     overflow: auto;
+    display : flex;
 }
 
 body {
@@ -40,12 +42,10 @@ body {
     font-size  : 1.5em;
     font-weight: 500;
 
-    display       : flex;
     flex-direction: column;
 }
 
 .centercontent {
-    display        : flex;
     align-items    : center;
     justify-content: center;
 
@@ -57,12 +57,9 @@ header {
     width : 100%;
     height: 215px;
 
-    background-color: #fff;
-
     margin-top   : map-get($margins, spacing-between-items);
     margin-bottom: map-get($margins, spacing-between-items);
 
-    display        : flex;
     justify-content: space-between;
 
     #logo {
@@ -86,13 +83,11 @@ header {
 
         background-color: map-get($colors, blue);
 
-        display: flex;
 
 
         ul {
             width: 100%;
 
-            display        : flex;
             justify-content: space-evenly;
 
             li {
@@ -115,7 +110,6 @@ main {
     width : 100%;
     height: 685px;
 
-    display        : flex;
     justify-content: space-between;
 
 
@@ -123,7 +117,6 @@ main {
         width : 49%;
         height: 100%;
 
-        display        : flex;
         justify-content: space-between;
 
     }
@@ -137,7 +130,8 @@ main {
             width : 100%;
         }
 
-        #article1 {
+        #article1,
+        #contact {
             @include gradient(to right, $hire1)
         }
 
@@ -147,6 +141,10 @@ main {
 
         #article3 {
             @include gradient(to left, $hire3)
+        }
+
+        #contact {
+            display: none;
         }
     }
 
@@ -174,10 +172,62 @@ main {
     display: none;
 }
 
-/*
-@media (max-width: 1129px) {
+
+@media (orientation: portrait) {
+
     * {
-        display: none;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+    }
+
+    body {
+        width : 90%;
+        margin: auto;
+
+    }
+
+    header {
+        height: 100%;
+
+        #logo {
+            width : 100%;
+            height: 215px;
+        }
+
+        nav {
+            display: none;
+        }
+    }
+
+
+    main {
+        height: 100%;
+        width : 100%;
+
+        flex-direction: column-reverse;
+
+        .main-container {
+            height       : 700px;
+            width        : 100%;
+            margin-bottom: map-get($map: $margins, $key: spacing-between-items)
+        }
+
+        section {
+            height: 100%;
+
+            article {
+                height       : 215px;
+                margin-bottom: map-get($map: $margins, $key: spacing-between-items)
+            }
+
+            #contact {
+                display: flex;
+            }
+        }
+
+        aside {
+            height: 100%;
+        }
     }
 }
-*/
